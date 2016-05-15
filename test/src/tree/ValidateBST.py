@@ -34,6 +34,7 @@ def checkBalanced(root):
 
 
 #Improved Height balance check for trees . as the complexity comes to o(N) - prior version has o(N2)
+
 def height(root):
     if root == None :
         return 0
