@@ -1,0 +1,11 @@
+
+def sort(ar):
+    if(ar == None or len(ar)<1):
+        return;
+    lowerIndex=0;
+    higherIndex=len(ar)
+    pivotIndex=lowerIndex+(higherIndex-lowerIndex)//2
+    pivot = ar[pivotIndex]
+
+ar = [3,4,2,1,5,8,7,6,9]
+print("Array Before Sort = ",ar)

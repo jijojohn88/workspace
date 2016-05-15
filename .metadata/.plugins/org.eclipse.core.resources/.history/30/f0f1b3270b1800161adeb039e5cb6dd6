@@ -1,0 +1,11 @@
+package com.granada.reference.btree;
+
+class Node {
+	int data;
+	Node left=null;
+	Node right = null;
+}
+public class LevelOrderTraversal {
+	
+
+}

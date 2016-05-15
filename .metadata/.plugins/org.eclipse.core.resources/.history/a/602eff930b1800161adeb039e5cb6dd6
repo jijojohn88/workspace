@@ -1,0 +1,20 @@
+package com.granada.reference.btree;
+
+class Node {
+	public int data;
+	public Node left=null;
+	public Node right = null;
+	public Node(int value) {
+		this.data=value;
+	}
+}
+public class LevelOrderTraversal {
+	
+public static void main(String[] args) {
+	
+	Node root = new Node(5);
+	root.left = new Node(1);
+	root.right = new Node(6);
+	
+}
+}

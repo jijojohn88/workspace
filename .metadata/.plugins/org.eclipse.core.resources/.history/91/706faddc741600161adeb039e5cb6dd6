@@ -1,0 +1,27 @@
+def swap(i, j):                    
+    sqc[i], sqc[j] = sqc[j], sqc[i] 
+
+def heapify(end,currentNode):   
+    leftChild=2 * currentNode + 1  
+    r=2 * (currentNode + 1)   
+    maxNode=currentNode   
+    if leftChild < end and sqc[currentNode] < sqc[leftChild]:   
+        maxNode = leftChild   
+    if r < end and sqc[maxNode] < sqc[r]:   
+        maxNode = r   
+    if maxNode != currentNode:   
+        swap(currentNode, maxNode)   
+        heapify(end, maxNode)   
+
+def heap_sort():     
+    end = len(sqc)   
+    start = end // 2 - 1 # use // instead of /
+    for i in range(start, -1, -1):   
+        heapify(end, i)   
+    for i in range(end-1, 0, -1):   
+        swap(i, 0)   
+        heapify(i, 0)   
+
+sqc = [2, 7, 1, -2, 56, 5, 3]
+heap_sort()
+print(sqc) 

@@ -1,0 +1,30 @@
+'''
+Created on May 15, 2016
+
+@author: Jijo
+'''
+
+#def sort(heap):
+
+#def buidHeap(heap):
+    
+def maxHeapify(heap,rootIndex,heapBoundary):
+    leftChild = 2*rootIndex
+    rightChild = leftChild+1
+    maxIndex = rootIndex
+    
+    if(leftChild < heapBoundary and heap[maxIndex] < heap[leftChild]):
+        maxIndex = leftChild
+    if(rightChild <= heapBoundary and heap[maxIndex] < heap[rightChild]) :
+        maxIndex = rightChild
+    
+    if(rootIndex != maxIndex):
+        heap[rootIndex],heap[maxIndex]=heap[maxIndex],heap[rootIndex]
+        maxHeapify(heap, maxIndex, heapBoundary)
+
+
+
+
+
+heap = [4,5,6,3,7,2,8,1,9,10]
+print("heap before sort = " , heap)

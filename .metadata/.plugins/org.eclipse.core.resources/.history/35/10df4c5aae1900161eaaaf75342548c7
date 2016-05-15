@@ -1,0 +1,14 @@
+class node:
+    def __init__(self,d,left,right):
+        self.data=d
+        self.left=left
+        self.right=right
+
+def partition(ar):
+    left = ar[:len(ar)//2]
+    right= ar[len(ar)//2+1:]
+    
+
+ar=[3,2,1,4,6,5,8,7,9]
+ar.sort();
+print(ar)

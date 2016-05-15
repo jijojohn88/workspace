@@ -1,0 +1,29 @@
+
+def sort(ar,lowerIndex,higherIndex):
+    if(ar == None or len(ar)<1):
+        return;
+    i=lowerIndex
+    j=higherIndex
+    pivotIndex=lowerIndex+(higherIndex-lowerIndex)//2
+    pivot = ar[pivotIndex]
+    
+    while i <= j:
+        while i < higherIndex and pivot < ar[i]:
+            i+=1
+        while j > lowerIndex and pivot > ar[j]:
+            j-=1
+        
+        if i<=j :
+            ar[i],ar[higherIndex] = ar[higherIndex],ar[lowerIndex]
+            lowerIndex+=1
+            higherIndex-=1
+    
+    if lowerIndex < len(ar):
+        sort(ar[lowerIndex-1:])
+    if higherIndex > 0:
+        sort(ar[:higherIndex+1])
+
+ar = [3,4,2,1,5,8,7,6,9]
+print("Array Before Sort = ",ar)
+sort(ar)
+print("Array after sort ", ar)

@@ -1,0 +1,11 @@
+'''
+Created on May 9, 2016
+
+@author: Jijo-Ancy
+'''
+
+print "i love you ancy"
+def sum(int x, int y):
+    return x+y
+
+print 'sum is ', sum(2,4)

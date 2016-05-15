@@ -1,0 +1,55 @@
+package com.granada.reference.btree;
+
+class Node {
+	public int data;
+	public Node left=null;
+	public Node right = null;
+	public Node(int value) {
+		this.data=value;
+	}
+}
+public class LevelOrderTraversal {
+	
+	private int findHeight(Node root) {
+		
+		if(root == null) {
+			return 0;
+		}
+		else {
+			int leftHeight = 1+ findHeight(root.left);
+			int rightHeight = 1 + findHeight(root.right);
+			return Math.max(leftHeight, rightHeight);
+		}
+	}
+	
+	public void printLevelOrder(Node root) {
+		
+		int heightOfTheTree = findHeight(root);
+		for(int i=1;i<heightOfTheTree;i++) {
+			printGivenLevel(root,i);
+		}
+	}
+	
+	private void printGivenLevel(Node root, int level) {
+		
+		if(root == null) {
+			return;
+		}
+		else if (level == 1) {
+			System.out.println(root.data + "\t");
+		}
+		else if(level >1) {
+			printGivenLevel(root.left, level-1);
+			printGivenLevel(root.right, level-1);
+		}
+	}
+	
+public static void main(String[] args) {
+	
+	Node root = new Node(5);
+	root.left = new Node(1);
+	root.right = new Node(6);
+	
+	new LevelOrderTraversal().printLevelOrder(root);
+}
+}

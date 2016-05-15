@@ -1,0 +1,32 @@
+
+class TreeNode:
+    def __init__(self,d,left=None,right=None):
+        self.data=d;
+        self.left=left;
+        self.right=right;
+        
+    
+def levelOrder(rootNode):
+    thislevel=[rootNode];
+    while thislevel : 
+        nextLevel = list();
+        for node in thislevel:
+            print (node.data, end='')
+            if node.left: nextLevel.append(node.left);
+            if node.right: nextLevel.append(node.right);
+        print
+        thislevel=nextLevel
+
+
+root=TreeNode(4);
+root.left=TreeNode(3)
+root.right=TreeNode(5)
+root.left.right=TreeNode(6)
+root.left.left=TreeNode(2)
+
+
+levelOrder(root)
+
+
+                
+    

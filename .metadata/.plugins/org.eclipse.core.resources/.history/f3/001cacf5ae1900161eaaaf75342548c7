@@ -1,0 +1,18 @@
+class node:
+    def __init__(self,d,left=None,right=None):
+        self.data=d
+        self.left=left
+        self.right=right
+
+def partition(ar):
+    if(ar == None and len(ar) <1) :
+        return;
+    root = node(ar[len(ar)//2])
+    root.left = partition(ar[:len(ar)//2])
+    root.right= partition(ar[len(ar)//2+1:])
+    return root
+    
+
+ar=[3,2,1,4,6,5,8,7,9]
+ar.sort();
+print(ar)
