@@ -1,0 +1,13 @@
+class Node:
+    def __init__(self, k, val):
+        self.key = k
+        self.left = None
+        self.right = None
+def height(root):
+    if not root:
+        return 0
+    
+    left = height(root.left)
+    right = height(root.right)
+    
+    return max(left,right)+1

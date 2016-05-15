@@ -1,0 +1,32 @@
+class TreeNode:
+    def __init__(self, value):
+        self.key = value
+        self.left = None
+        self.right = None
+def minHeight(root):
+    if not root:
+        return 0
+    left = minHeight(root.left)
+    right = minHeight(root.right)
+    return min(left,right)+1
+
+def maxHeight(root):
+    if not root:
+        return 0
+    left = maxHeight(root.left)
+    right = maxHeight(root.right)
+    return max(left,right)+1
+
+root = TreeNode(3)
+root.left=TreeNode(2)
+root.left.left=TreeNode(1)
+root.left.right=TreeNode(4)
+root.right=TreeNode(6)
+root.right.left=TreeNode(4)
+root.right.right=TreeNode(7)
+root.right.right.left=TreeNode(6)
+root.right.right.left.left=TreeNode(1)
+
+print("Minimum height of the tree = " , minHeight(root))
+print("Maximum Height of the tree = " , maxHeight(root))
+print("Is the tree balanced in terms of depth - ",abs(minHeight(root)-maxHeight(root)) < 1)

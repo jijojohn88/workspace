@@ -1,59 +1,72 @@
 -- VERSION_4
 -- START DISKCACHE_2
 /Users/Jijo-Ancy/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/test/com.python.pydev.analysis/v2_indexcache
+tree.__init__|1463346601000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/tree/__init__.py
+new1.HeapSort|1463212589000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/HeapSort.py
+new1.MyMergeSort2|1463032087000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/MyMergeSort2.py
+tree.ValidateBST|1463351446000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/tree/ValidateBST.py
+new1.QuickSort|1463339631000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/QuickSort.py
+new1.Fibonacci|1463212332000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/Fibonacci.py
+new1.HeapSort_May15|1463340548000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/HeapSort_May15.py
+new1.MyMergeSort|1463028698000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/MyMergeSort.py
+new1.MergeSort|1463032234000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/MergeSort.py
 new1.LevelOrderTraversal|1463212670000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/LevelOrderTraversal.py
 new1.helloworld|1462859611000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/helloworld.py
 new1.__init__|1462859072000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/__init__.py
-new1.MyMergeSort2|1463032087000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/MyMergeSort2.py
-new1.HeapSort|1463212589000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/HeapSort.py
-new1.QuickSort|1463339631000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/QuickSort.py
-new1.Fibonacci|1463212332000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/Fibonacci.py
-new1.MyMergeSort|1463028698000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/MyMergeSort.py
 new1.arrayToTree|1463216107000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/arrayToTree.py
-new1.MergeSort|1463032234000000000|/Users/Jijo-Ancy/Documents/workspace/test/src/new1/MergeSort.py
 -- END DISKCACHE
 -- START DICTIONARY
-12
-9=node
-8=new1.LevelOrderTraversal
-11=TreeNode.__init__
-6=new1.helloworld
-10=TreeNode
-12=node.__init__
+14
+13=TreeNode.__init__
+14=node.__init__
 2=new1.MyMergeSort2
-7=new1.HeapSort
+7=tree.ValidateBST
+9=new1.HeapSort
 5=new1.QuickSort
 3=new1.MyMergeSort
-4=new1.arrayToTree
+6=new1.HeapSort_May15
 1=new1.MergeSort
+11=node
+10=new1.LevelOrderTraversal
+8=new1.helloworld
+12=TreeNode
+4=new1.arrayToTree
 -- END DICTIONARY
 -- START TREE 1
-20
+26
+__i|0|
 ali|1|alist!11@
 ar|4|ar!19@ar!27@ar!35@ar!43@
-bui|0|
-div|1|divideTwoNumbers!50@
-hea|1|heapify!58@
+bui|1|buildHeap!50@
+che|1|checkBalanced!58@
+div|1|divideTwoNumbers!66@
+hea|2|heap!51@heapify!74@
+hei|1|height!58@
 ino|1|inOrderTraversal!34@
-lev|3|levelOrder!66@levelOrderTraversal!34@levelOrder!34@
-max|0|
+lev|3|levelOrder!82@levelOrderTraversal!34@levelOrder!34@
+max|2|maxHeapify!50@maxHeight!58@
 mer|5|merge!26@merge!18@mergeSort!10@mergeSort!26@mergeSort!18@
-mul|1|multiplyTwoNumbers!50@
+min|1|minHeight!58@
+mul|1|multiplyTwoNumbers!66@
 nod|1|node!33@
 par|1|partition!34@
 pos|1|postOrderTraversal!34@
 pre|1|preOrderTraversal!34@
-roo|2|root!67@root!35@
-sor|3|sort!26@sort!42@sort!18@
-sub|1|substractTwoNumbers!50@
-sum|1|sumofnumbers!50@
-swa|1|swap!58@
-tre|1|TreeNode!65@
+roo|3|root!83@root!59@root!35@
+sor|4|sort!50@sort!26@sort!42@sort!18@
+sub|1|substractTwoNumbers!66@
+sum|1|sumofnumbers!66@
+swa|1|swap!74@
+tre|2|TreeNode!81@TreeNode!57@
+val|1|validate!58@
+ver|0|
 -- END TREE
 -- START TREE 2
-4
-__i|2|__init__!9&34@__init__!10&66@
-dat|2|data!11&67@data!12&35@
-lef|2|left!12&35@left!11&67@
-rig|2|right!12&35@right!11&67@
+6
+__i|3|__init__!11&34@__init__!12&82@__init__!12&58@
+dat|2|data!13&83@data!14&35@
+key|1|key!13&59@
+lef|3|left!14&35@left!13&83@left!13&59@
+rig|3|right!14&35@right!13&83@right!13&59@
+val|0|
 -- END TREE

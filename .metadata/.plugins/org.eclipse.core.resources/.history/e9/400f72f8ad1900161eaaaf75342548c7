@@ -1,8 +1,0 @@
-
-def partition(ar):
-    left = ar[:len(ar)//2]
-    right= ar[len(ar)//2+1:]
-
-ar=[3,2,1,4,6,5,8,7,9]
-ar.sort();
-print(ar)
