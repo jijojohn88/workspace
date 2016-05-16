@@ -4,3 +4,5 @@
 *.v1_projectinfodelta
 
 *.v1_astdelta
+
+*.xmi
