@@ -76,7 +76,8 @@ public class Iteniary_dfs_search {
 
 	public static void main(String[] args) {
 		Iteniary_dfs_search rc = new Iteniary_dfs_search();
-		String[][] bds = { { "JFK", "SFO" }, { "JFK", "ATL" }, { "ATL", "JFK" }, { "SFO", "ATL" }, { "ATL", "SFO" } };
+		String[][] bds = { { "JFK", "SFO" }, { "JFK", "ATL" }, { "ATL", "JFK" }, 
+				{ "SFO", "ATL" }, { "ATL", "SFO" } };
 		List<String> ret = rc.findItinerary(bds);
 		for (String s : ret) {
 			System.out.println(s);
