@@ -1,3 +1,8 @@
+/**
+ * https://leetcode.com/problems/find-the-closest-palindrome/submissions/
+ * @author jjijo
+ *
+ */
 public class ClosestPalindrome {
 	public String nearestPalindromic(String n) {
 		String returnValue = "";
