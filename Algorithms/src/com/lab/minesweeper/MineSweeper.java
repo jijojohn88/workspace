@@ -1,3 +1,4 @@
+package com.lab.minesweeper;
 
 
 import java.io.IOException;
