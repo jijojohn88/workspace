@@ -1,7 +1,3 @@
-
-
-import java.util.Iterator;
-
 /*
  * https://leetcode.com/problems/median-of-two-sorted-arrays/
  * accepted answer too
@@ -46,17 +42,6 @@ public class MedianOfTwoSortedArrays {
 		return returnValue;
 	}
 	
-	public float findMedian(int[] array) {
-		float returnValue=0;
-		int midIndex = array.length / 2;
-		System.out.println("midindex = " + midIndex);
-		returnValue = array[midIndex];
-		if (array.length % 2 == 0) {
-			System.out.println("Sum = " + (array[midIndex - 1] + array[midIndex]));
-			returnValue = (array[midIndex - 1] + array[midIndex]) / 2f;
-		}
-		return returnValue;
-	}
 
 	public static void printArray(int[] arrray) {
 		for (int a : arrray) {
