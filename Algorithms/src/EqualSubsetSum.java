@@ -2,38 +2,36 @@
 public class EqualSubsetSum {
 
 	public boolean canPartition(int[] nums) {
-		if (nums.length == 0)
+
+		if (nums.length == 1) {
 			return false;
+		}
+
+		// check the sum %2 is zero
 		int totalSum = 0;
-		// find sum of all array elements
 		for (int num : nums) {
 			totalSum += num;
 		}
-		// if totalSum is odd, it cannot be partitioned into equal sum subset
-		if (totalSum % 2 != 0)
+
+		if (totalSum % 2 != 0) {
 			return false;
-		int subSetSum = totalSum / 2;
-		boolean dp[] = new boolean[subSetSum + 1];
-		dp[0] = true;
+		}
+		int halfSum = totalSum / 2;
+		boolean[] combinationMapper = new boolean[halfSum + 1];
+		combinationMapper[0] = true;
+
 		for (int curr : nums) {
-			System.out.println("Number = " + curr);
-			for (int counter = subSetSum; counter >= curr; counter--) {
-				if (dp[counter - curr]) {
-					System.out.println("Counter = " + counter + "-" + dp[counter] + "-[" + (counter - curr) + "]-"
-							+ dp[counter - curr]);
-				}
-				dp[counter] |= dp[counter - curr];
-				if (dp[subSetSum]) {
-					break;
-				}
+			for (int counter = halfSum; counter >= curr; counter--) {
+				combinationMapper[counter] |= combinationMapper[counter - curr];
 			}
 		}
-		return dp[subSetSum];
+
+		return combinationMapper[halfSum];
 	}
 
 	public static void main(String[] args) {
 
-		int[] array = { 11, 5, 8, 4, 6, 4 };
+		int[] array = { 5,5,6,6 };
 		System.out.println(new EqualSubsetSum().canPartition(array));
 
 	}

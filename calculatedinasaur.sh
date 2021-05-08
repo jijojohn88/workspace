@@ -4,14 +4,22 @@
 #Given the following formula, speed = ((STRIDE_LENGTH / LEG_LENGTH) - 1) * SQRT(LEG_LENGTH * g)
 #Where g = 9.8 m/s^2 (gravitational constant)
 
+cat dataset1.csv dataset2.csv | sort | grep -v NAME | cut -d "," -f1 | uniq > names.dat
 names=`cat names.dat`
+rm output.dat
 for n in $names
 do
-stride=`cat dataset2.csv | grep -v NAME | grep -i $n | cut -d "," -f2`
-length=`cat dataset1.csv | grep -V NAME | grep -i $n | cut -d "," -f2`
-echo $length
-echo printf %.10f\\n "$((stride/length))e-9"
-#awk "BEGIN {print ($stride/$length)-1}"
-echo $value
-echo $stride","$n
+	stride=`cat dataset2.csv | grep -i $n | cut -d "," -f2`
+	length=`cat dataset1.csv | grep -i $n | cut -d "," -f2`
+	if [[ ! -z "$length" && ! -z "$stride" ]]
+	then
+		speed=$(echo "scale=2; $stride/$length" | bc)
+		speed=$(echo $speed-1|bc)
+		speed=$(echo "$speed * sqrt ($length * 9.8) "|bc)
+		echo $n $speed >> output.dat 2>&1
+	else
+		echo "parse error for name " $n
+	fi
 done
+	echo "---------------------"
+	cat output.dat | sort -nk2
