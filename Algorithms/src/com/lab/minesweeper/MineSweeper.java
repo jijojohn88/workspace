@@ -185,6 +185,13 @@ public class MineSweeper {
 	}
 }
 
+/**
+ * class representing a single cell 
+ * which holds informations such as the index in the 2d matrix 
+ * also booleans holding information as Mine and if its already exposed.
+ * @author jjijo
+ *
+ */
 class Cell {
 	int x, y, value;
 	boolean isMine = false;
