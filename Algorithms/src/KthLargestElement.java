@@ -6,9 +6,10 @@ public class KthLargestElement {
 
 	public int partition(int[] array, int k, int start, int end) {
 
-		System.out.println("partition = " + partition);
+		//System.out.println("partition = " + partition);
 
-		int pivot = array[start];
+		int pivot = array[partition];
+		swap(array,partition,start);
 
 		int i = start;
 		int j = end;
@@ -29,10 +30,31 @@ public class KthLargestElement {
 
 		}
 		swap(array, start, j);
-		System.out.println("I did fix the element at " + j);
 		return j;
 
 	}
+	
+	public void fixBoarder(int[] array) {
+		int lowest = Integer.MAX_VALUE;
+		int lowestIndex = -1;
+		int largest = Integer.MIN_VALUE;
+		int largestIndex = -1;
+		
+		for(int i=0;i<array.length;i++) {
+			if(lowest > array[i]) {
+				lowestIndex = i;
+				lowest = array[i];
+			}
+			if(largest < array[i]) {
+				largestIndex = i;
+				largest = array[i];
+			}
+		}
+		swap(array,0,lowestIndex);
+		swap(array,array.length-1,largestIndex);
+		
+	}
+	
 
 	public int findKthLargest(int[] array, int k, int start, int end) {
 		partition = array.length - k;
@@ -56,7 +78,7 @@ public class KthLargestElement {
 		int temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
-		print(array, i, j);
+		//print(array, i, j);
 	}
 
 	public static void print(int[] array) {
@@ -84,8 +106,13 @@ public class KthLargestElement {
 	}
 
 	public static void main(String[] args) {
-		int[] array = { 5, 2, 3, 6, 0, 8, 4, 9, 1, 7 };
-		int index = new KthLargestElement().findKthLargest(array, 4, 0, array.length - 1);
+		int[] array = new LoadTestIntArray().read().stream().mapToInt(i -> i).toArray();
+		//int[] array = {3,5,2,7,6,1,9,8,0,4};
+		print(array);
+		new KthLargestElement().fixBoarder(array);
+		print(array);
+		int index = new KthLargestElement().findKthLargest(array,918, 0, array.length - 1);
+		System.out.println("value = " + array[index]);
 		System.out.println("value = " + array[index]);
 		System.out.println("-------------");
 		Arrays.sort(array);
