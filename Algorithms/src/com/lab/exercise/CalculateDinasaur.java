@@ -78,6 +78,9 @@ public class CalculateDinasaur {
 
 }
 
+//email regex = "^[\\w-_\\.+]*[\\w-_\\]@
+
+
 class Dinasaur implements Comparable<Dinasaur> {
 	String name;
 	float stride;
