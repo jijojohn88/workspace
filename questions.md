@@ -22,3 +22,6 @@
  - what happens when you type ls *al
  - what happens when you type ssh somehost
  - explain the OSI layer
+ 
+ ------------------
+ linux internals read : https://landley.net/writing/memory-faq.txt
