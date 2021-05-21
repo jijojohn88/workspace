@@ -25,3 +25,25 @@
  
  ------------------
  linux internals read : https://landley.net/writing/memory-faq.txt
+ 
+ - What is resident memory in top command ? 
+ - What is swap in memory management ? 
+ - What is load average in linux ? 
+ - What are the states in linux for a process ? 
+ - What does vmstat command give as output ? 
+ - What is the content of inode ? 
+ 	- File name
+	- File permission
+	- File size and links 
+- Find out how much memory the machine is using ? 
+	- Free - m
+ - What is the preferred swap size in linux ?
+	- Twice the amount of physical memory - if not the same size of memory installed 
+- What is the difference between hardlink and softlink ? 
+- Change permissions of a file using commands ?
+	- Chmod, chown , chgrp
+- What are the different file system names in linux ? 
+	- ext3/ext4, XFS, BtrFs
+- Write a command that will look for files with an extension "c", and has the occurrence of the string "apple" in it.
+	-> Find ./ -name “*.c” | xargs grep -i “apple”
+ 
