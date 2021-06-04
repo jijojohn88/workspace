@@ -46,4 +46,9 @@
 	- ext3/ext4, XFS, BtrFs
 - Write a command that will look for files with an extension "c", and has the occurrence of the string "apple" in it.
 	-> Find ./ -name “*.c” | xargs grep -i “apple”
+- what is nscd?
+	-  Nscd is a daemon that provides a cache for the most common name service requests. The default configuration file, /etc/nscd. conf, determines the behavior of the cache daemon.
+ - explain more about virtual file system ?
+  	- virtual file system on top of all the type of filesystems available in linux operating system . so that the user have a single user interface to access them and use it in the same manner. its an abstract layer on top of the concrete file system. https://en.wikipedia.org/wiki/Virtual_file_system
+ 
  

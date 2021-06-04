@@ -16,8 +16,12 @@ public class LevelOrderTraversal {
 			return 0;
 		}
 		else {
+			
+			System.out.print("[" + root.data + "]");
 			int leftHeight = 1+ findHeight(root.left);
 			int rightHeight = 1 + findHeight(root.right);
+			System.out.println("left=" + leftHeight);
+			System.out.println("right=" + rightHeight);
 			return Math.max(leftHeight, rightHeight);
 		}
 	}

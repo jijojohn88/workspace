@@ -25,6 +25,7 @@ public class Iteniary_dfs_search {
 				indexMap.put(ticket[1], i++);
 			}
 		}
+		System.out.println("indexMap = " + indexMap);
 
 		portNum = indexMap.size();
 		routes = new int[portNum][portNum];
