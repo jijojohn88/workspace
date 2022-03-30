@@ -1,0 +1,6 @@
+- What is an Inode ? 
+	- Inode is a special datastructure used to store metadata information about a file in a filesystem. 
+	- Each inode has an inode number, which is unique within a file system. The same inode number might appear in more than one file system. However, the file system ID and inode number combine to make a unique identifier, regardless of how many file systems are mounted on your Linux system.
+	- All inodes are held in one table. Using an inode number, the file system easily calculates the offset into the inode table at which that inode is located. You can see why the “i” in inode stands for index.
+	- `df -i` option shows the inode details of a system such as total number of Inodes and used vs Free and the mount point.
+	- https://www.howtogeek.com/465350/everything-you-ever-wanted-to-know-about-inodes-on-linux/

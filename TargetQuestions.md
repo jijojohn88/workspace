@@ -20,3 +20,48 @@ Implement a function that searches a file system for files with identical conten
 How to design a web counter that returns number of visitors in last 5 mins.
 Find all duplicate files by content in your filesystem.
 Implement a class registration system.
+
+
+-------------------------------
+𝐋𝐨𝐰 𝐋𝐞𝐯𝐞𝐥 𝐃𝐞𝐬𝐢𝐠𝐧 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬:
+Design Parking Lot
+Single Entry and Exit Gates
+Multiple Entry and Exit Gates
+Design Multiplayer Sudoku Game
+Players have to Rotate the Pin in order to decide the turn.
+Player who is able to fill the last empty cell will win.
+Design LRU (Static + Dynamic Input Flow)
+Follow Up : Implement LFU with Least Changes in the previous design (LRU)
+Design In Memory Cache
+Design Snake and Ladder Game
+How would you change the design if wild cards are allowed.
+Design Exception Class With Test Cases
+Note: Don't forget to use Singleton Pattern Here.
+Design Money Splitter
+Design Notification Service
+Design Message Queue
+Design a Terminal/Command Prompt
+𝐇𝐢𝐠𝐡 𝐋𝐞𝐯𝐞𝐥 𝐃𝐞𝐬𝐢𝐠𝐧 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬:
+Design Whatsapp
+Design Uber Backend
+Design Tiny URL
+Design Dream11
+Design Leetcode
+Design MS Teams
+Design Dominos/PizzaHut
+Design Big Bazaar
+Design Zomato/Swiggy
+Design Docker
+𝐃𝐒/𝐀𝐋𝐆𝐎 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬:
+Reverse Vowels in the string.
+Using Constant space
+Longest Palindromic Substring.
+Find the largest island in Matrix of 0s and 1s
+Longest Repeating Subsequence
+Compress and Uncompress a Tree/Graph/LinkedList
+All Variations of Jump Game
+All Variations of Stocks Buy and Sell DP
+Word Search 1/2
+Median of 2 sorted arrays
+Kth largest/smallest element in the rowwise and columnwise sorted Matrix
+Note: All the above questions are sorted by their Frequency. 

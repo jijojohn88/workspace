@@ -1,0 +1,26 @@
+Palindrome 
+ - divide the string in the middle and traverse from middle to end/start , and compare each position 
+ - Palindrome mid point can be only 1 or 2 points. run the same palindrome check method for both the conditions with the mid point repeating for , 1 point palindrome
+
+SameTree
+ - use recursion to traverse left and right at the same and return boolean and do && on them so that if one of them fails it will make everything false.
+
+TwoSum
+ - use hashmap to store the ($target - $number) - if its present return the indices. 
+
+LongestSubstring with out repeating chars 
+ - maintain start and end indices 
+ - use a hashset to store the current string in progress
+ - if the set doesnot contain keep adding to the set and increment the end operator
+ - else - increment the start index 
+        - remove the First char alone from the set 
+        - using the same end char check the set again if it still has the repeating char then keep repeating the else 
+ - return the max length found so far. 
+
+Island problem [ https://leetcode.com/problems/number-of-islands/submissions/ ]
+       - iterate the entire Matrix
+       - call dfs to check the next 4 neighbors of the cell is 1 or 0.
+       - sink the current node to make sure its again iterated
+       - always ignore the value 0 as we are only interested in value 1
+
+
